@@ -6,7 +6,8 @@ export const Tutors: Tutor[] = [];
 
 export const createTutor: RequestHandler = (req, res, next) => {
   const tutor = (req.body as {tutor: Tutor}).tutor;
-  const newTutor = new Tutor(Tutors.length + 1, tutor.name, 
+
+  const newTutor = new Tutor(tutor.id, tutor.name, 
     tutor.phone, 
     tutor.email, 
     tutor.date_of_birth, 
