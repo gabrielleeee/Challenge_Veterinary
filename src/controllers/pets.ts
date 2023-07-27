@@ -46,3 +46,20 @@ export const updatePet: RequestHandler = (req, res, next) => {
 
   res.status(200).json({message: 'Pet atualizado com sucesso!', updatePet: updatedPet});
 }
+
+export const deletePet: RequestHandler = (req, res, next) => {
+    const tutorId = req.params.tutorId;
+    const petId = req.params.petId;
+    const foundTutor = Tutors.find(tutor => tutor.id === +tutorId);
+    const foundPet = foundTutor?.pets.find(pet => pet.id === +petId);
+    
+    if(!foundTutor || !foundPet){
+      return registerNotFound(req, res);
+    }
+    
+    const petIndex = foundTutor?.pets.findIndex(pet => +pet.id === +petId);
+  
+    foundTutor.pets.splice(petIndex, 1)
+    
+    res.status(200).json({message: 'Pet deletado com sucesso!'})
+}
