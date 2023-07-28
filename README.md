@@ -37,7 +37,7 @@ Certifique-se de ter o [Node.js](https://nodejs.org/en/) instalado em sua máqui
 
 Primeiro copie o link do repositório e rode no terminal do seu editor o comando:
 ```
-git glone {link copiado}
+git clone {link copiado}
 ```
 Após clonar execute os dois comandos abaixo, sendo o primeiro para instalar as dependências do projeto, e o segundo para rodar o programa.
 

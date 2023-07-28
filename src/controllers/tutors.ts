@@ -14,6 +14,15 @@ export const createTutor: RequestHandler = (req, res, next) => {
     tutor.zip_code, 
     tutor.pets);
 
+
+  const isTutorIdExists = (id: number): boolean => {
+    return Tutors.some(tutor => tutor.id === id);
+  };
+    
+  if (isTutorIdExists(+tutor.id)) {
+    return res.status(400).json({ message: 'ID do tutor já está em uso!' });
+  };
+
   Tutors.push(newTutor);
 
   res.status(200).json({message: 'Tutor criado com sucesso!', createTutor: newTutor});
