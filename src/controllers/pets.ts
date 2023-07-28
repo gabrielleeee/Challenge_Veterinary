@@ -7,6 +7,15 @@ export const createPet: RequestHandler = (req, res, next) => {
     const pet = (req.body as {pet: Pets}).pet;
     const tutorId = req.params.tutorId;
     const tutor = Tutors.find(tutor => tutor.id === +tutorId);
+
+    if (!tutor) {
+      return res.status(404).json({ message: 'Tutor não encontrado!' });
+    }
+
+    if (tutor.pets.some(existingPet => existingPet.id === pet.id)) {
+      return res.status(400).json({ message: 'ID do pet já está em uso para este tutor!' });
+    }
+
     const newPet = new Pets(
         pet.id,
         pet.name, 
