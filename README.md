@@ -50,7 +50,7 @@ npm start
 
 ## API
 
-Para este projeto foi utilizado a plataforma Postman. O arquivo com a coleção das rotas está blábláblá.
+Para este projeto foi utilizado a plataforma Postman. 
 
 ## Autores
 - Desenvolvido por [Gabrielle Poletti Ferreira](https://github.com/gabrielleeee)
