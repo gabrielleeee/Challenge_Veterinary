@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "ceaf0a95-05e0-4e7a-904a-c5767e0444f8",
+		"name": "ChallengeVeterinay",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28242791"
+	},
+	"item": [
+		{
+			"name": " Retrieves all tutors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/tutors",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tutors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new tutor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tutor\":\r\n        {\r\n            \"id\": 1,\r\n            \"name\": \"Gabrielle\",\r\n            \"phone\": \"85989323895\",\r\n            \"email\": \"gabrielle.poletti@compasso.com\",\r\n            \"date_of_birth\": \"2003-07-21 10:10\",\r\n            \"zip_code\": \"61760000\",\r\n            \"pets\": []\r\n        }\r\n        \r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/tutor",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tutor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Updates a tutor",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tutor\":\r\n        {\r\n            \"id\": 1,\r\n            \"name\": \"Gabrielle Atualizada\",\r\n            \"phone\": \"85989323895\",\r\n            \"email\": \"gabrielle.poletti@compasso.com\",\r\n            \"date_of_birth\": \"2003-07-21 10:10\",\r\n            \"zip_code\": \"61760000\",\r\n            \"pets\": []\r\n        }\r\n        \r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/tutor/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tutor",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": " Deletes a tutor",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/tutor/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tutor",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creates a pet and adds it to a tutor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"pet\": {\r\n    \"id\": 1,\r\n    \"name\": \"primeiro pet\",\r\n    \"species\": \"Cachorro\",\r\n    \"carry\": \"p\",\r\n    \"weight\": 5.5,\r\n    \"date_of_birth\": \"2023-07-26\"\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/pet/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pet",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Updates a pet´s info",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"pet\": {\r\n    \"id\": 1,\r\n    \"name\": \"Primeiro pet atualizado\",\r\n    \"species\": \"Cachorro\",\r\n    \"carry\": \"p\",\r\n    \"weight\": 5.5,\r\n    \"date_of_birth\": \"2023-07-26\"\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/pet/1/tutor/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pet",
+						"1",
+						"tutor",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletes a pet from a tutor",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/pet/1/tutor/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pet",
+						"1",
+						"tutor",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
