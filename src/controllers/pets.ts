@@ -1,9 +1,9 @@
-import { RequestHandler } from "express";
-import { Pets } from '../models/tutor';
+import { Request, Response, NextFunction } from 'express';
+import { Pets } from '../models/pet';
 import { Tutors } from '../controllers/tutors';
 import registerNotFound from "../middlewares/register-not-found";
 
-export const createPet: RequestHandler = (req, res, next) => {
+export const createPet = (req: Request, res: Response, next: NextFunction) => {
     const pet = (req.body as {pet: Pets}).pet;
     const tutorId = req.params.tutorId;
     const tutor = Tutors.find(tutor => tutor.id === +tutorId);
@@ -30,7 +30,7 @@ export const createPet: RequestHandler = (req, res, next) => {
     res.status(200).json({message: 'Novo pet criado com sucesso!', createPet: newPet});
 }
 
-export const updatePet: RequestHandler = (req, res, next) => {
+export const updatePet = (req: Request, res: Response, next: NextFunction) => {
   const tutorId = req.params.tutorId;
   const petId = req.params.petId;
   const pet = (req.body as {pet: Pets}).pet;
@@ -56,7 +56,7 @@ export const updatePet: RequestHandler = (req, res, next) => {
   res.status(200).json({message: 'Pet atualizado com sucesso!', updatePet: updatedPet});
 }
 
-export const deletePet: RequestHandler = (req, res, next) => {
+export const deletePet = (req: Request, res: Response, next: NextFunction) => {
     const tutorId = req.params.tutorId;
     const petId = req.params.petId;
     const foundTutor = Tutors.find(tutor => tutor.id === +tutorId);

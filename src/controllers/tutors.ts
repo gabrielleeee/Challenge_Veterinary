@@ -1,10 +1,10 @@
-import { RequestHandler } from "express";
+import { Request, Response, NextFunction } from 'express';
 import { Tutor } from '../models/tutor';
 
 export const Tutors: Tutor[] = [];
 
 
-export const createTutor: RequestHandler = (req, res, next) => {
+export const createTutor = (req: Request, res: Response, next: NextFunction) => {
   const tutor = (req.body as {tutor: Tutor}).tutor;
 
   const newTutor = new Tutor(tutor.id, tutor.name, 
@@ -28,11 +28,11 @@ export const createTutor: RequestHandler = (req, res, next) => {
   res.status(200).json({message: 'Tutor criado com sucesso!', createTutor: newTutor});
 }
 
-export const getTutors: RequestHandler = (req, res, next) => {
+export const getTutors = (req: Request, res: Response, next: NextFunction) => {
     res.json({tutors: Tutors});
 }
   
-export const updateTutor: RequestHandler<{id: String}> = (req, res, next) => {
+export const updateTutor = (req: Request, res: Response, next: NextFunction) => {
   const tutorId = req.params.id;
   const updateTutor = (req.body as {tutor: Tutor}).tutor;
   const tutorIndex = Tutors.findIndex(tutor => +tutor.id === +tutorId);
@@ -52,7 +52,7 @@ export const updateTutor: RequestHandler<{id: String}> = (req, res, next) => {
   res.status(200).json({message: 'Tutor atualizado com sucesso!', updateTutors: Tutors[tutorIndex]});
 }
 
-export const deleteTutor: RequestHandler = (req, res, next) => {
+export const deleteTutor = (req: Request, res: Response, next: NextFunction) => {
     const tutorId = req.params.id;
     const tutorIndex = Tutors.findIndex(tutor => +tutor.id === +tutorId);
 

@@ -1,9 +1,9 @@
 
 # Veterinary Franchise
 
-Sistema de gestão de clientes internos e atendimentos para uma clínica veterinária.
+Management system for internal clients and appointments for a veterinary clinic.
 
-No sistema é possível criar, retornar, atualizar e deletar um cliente e criar, atualizar e deletar um pet de um cliente.
+In the system it is possible to create, return, update and delete a customer and create, update and delete a pet of a customer.
 
 ## Tabela de conteúdos
 
@@ -15,17 +15,17 @@ No sistema é possível criar, retornar, atualizar e deletar um cliente e criar,
 
 ## Funcionalidades
 
-- [x]  Retornar todos os clientes cadastrados
-- [x]  Cadastrar novo cliente
-- [x]  Atualizar clientes
-- [x]  Deletar clientes
-- [x]  Cadastrar um pet e adiciona-lo à um cliente
-- [x]  Atualizar um pet
-- [x]  Deletar um pet de um cliente
+- [x] Return all registered customers
+- [x] Register new customer
+- [x] Update clients
+- [x] Delete customers
+- [x] Register a pet and add it to a client
+- [x] Upgrade a pet
+- [x] Delete a pet from a customer
 
 ## Tecnologias 
 
-Para o desenvolvimento do projeto foi utilizado as seguintes tecnologias:
+The following technologies were used for the development of the project:
 
 - Node.js
 - Express
@@ -33,13 +33,13 @@ Para o desenvolvimento do projeto foi utilizado as seguintes tecnologias:
 
 ## Executando localmente
 
-Certifique-se de ter o [Node.js](https://nodejs.org/en/) instalado em sua máquina. 
+Make sure you have [Node.js](https://nodejs.org/en/) installed on your machine. 
 
-Primeiro copie o link do repositório e rode no terminal do seu editor o comando:
+First copy the repository link and run the command in your editor's terminal:
 ```
-git clone {link copiado}
+git clone {link}
 ```
-Após clonar execute os dois comandos abaixo, sendo o primeiro para instalar as dependências do projeto, e o segundo para rodar o programa.
+After cloning, run the two commands below, the first to install the project's dependencies, and the second to run the program.
 
 ```
 npm install
@@ -50,7 +50,7 @@ npm start
 
 ## API
 
-Para este projeto foi utilizado a plataforma Postman. 
+For this project, the Postman platform was used.
 
 ## Autores
-- Desenvolvido por [Gabrielle Poletti Ferreira](https://github.com/gabrielleeee)
+- Developed by [Gabrielle Poletti Ferreira](https://github.com/gabrielleeee)
