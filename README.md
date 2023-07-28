@@ -1,19 +1,55 @@
 
+
 # Veterinary Franchise
 
 Management system for internal clients and appointments for a veterinary clinic.
 
 In the system it is possible to create, return, update and delete a customer and create, update and delete a pet of a customer.
 
-## Tabela de conteúdos
+## Technologies 
 
-   * Funcionalidades
-   * Tecnologias
-   * Executando localmente
-   * API
-   * Autores
+The following technologies were used for the development of the project:
 
-## Funcionalidades
+- Node.js
+- Express
+- Typescript
+
+## Running locally
+
+Make sure you have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/) installed on your machine. 
+
+First copy the repository link and run the command in your editor's terminal:
+```
+git clone {link}
+```
+After cloning, run the command below to install the project's dependencies.
+
+```
+npm install
+```
+
+Rename the .env-example file to .env and fill in the port you prefer where the project runs.
+
+Then, run the command below to run the project.
+
+```
+npm start
+```
+
+## API
+
+For this project, the Postman platform was used. To import the collection and test the route, follow these steps:
+
+- Open the `rotas.json` file inside the Postman folder
+- Click the *Raw* button
+- Copy the URL of your browser that is displaying the file
+- Open Postman
+- Click the *Import* button
+- Paste the copied content and hit Enter
+
+The collection will be imported with the routes and the body filled with data for the test.
+
+## Functionalities
 
 - [x] Return all registered customers
 - [x] Register new customer
@@ -23,34 +59,5 @@ In the system it is possible to create, return, update and delete a customer and
 - [x] Upgrade a pet
 - [x] Delete a pet from a customer
 
-## Tecnologias 
-
-The following technologies were used for the development of the project:
-
-- Node.js
-- Express
-- Typescript
-
-## Executando localmente
-
-Make sure you have [Node.js](https://nodejs.org/en/) installed on your machine. 
-
-First copy the repository link and run the command in your editor's terminal:
-```
-git clone {link}
-```
-After cloning, run the two commands below, the first to install the project's dependencies, and the second to run the program.
-
-```
-npm install
-```
-```
-npm start
-```
-
-## API
-
-For this project, the Postman platform was used.
-
-## Autores
+## Authors
 - Developed by [Gabrielle Poletti Ferreira](https://github.com/gabrielleeee)
