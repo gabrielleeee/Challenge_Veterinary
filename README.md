@@ -18,17 +18,21 @@ The following technologies were used for the development of the project:
 
 Make sure you have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/) installed on your machine. 
 
-First copy the repository link and run the command in your editor's terminal:
+
+First, copy the repository link and run the command in Command Prompt in a folder of your choice:
+
 ```
 git clone {link}
+
 ```
-After cloning, run the command below to install the project's dependencies.
+Open the folder in an editor and run the command below to install the project's dependencies.
 
 ```
 npm install
 ```
 
-Rename the .env-example file to .env and fill in the port you prefer where the project runs.
+Rename the .env-example file to .env and fill in your preferred port where the project runs. 
+Remember, if you put a port other than 3000, change it in Postman routes.
 
 Then, run the command below to run the project.
 
@@ -36,7 +40,7 @@ Then, run the command below to run the project.
 npm start
 ```
 
-## API
+## API and Routes
 
 For this project, the Postman platform was used. To import the collection and test the route, follow these steps:
 
