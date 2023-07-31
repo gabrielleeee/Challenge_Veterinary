@@ -16,7 +16,7 @@ export class PetController{
     }
 
     if (tutor.pets.some(existingPet => existingPet.id === pet.id)) {
-      return res.status(400).json({ message: 'ID do pet já está em uso para este tutor!' });
+      return res.status(400).json({ message: 'Pet ID is already in use for this tutor!' });
     }
 
     const newPet = new Pets(
@@ -29,7 +29,7 @@ export class PetController{
    
     tutor?.pets.push(newPet);
 
-    return res.status(200).json({message: 'Novo pet criado com sucesso!', createPet: newPet});
+    return res.status(200).json({message: 'New pet created successfully!', createPet: newPet});
   }
 
   updatePet (req: Request, res: Response, next: NextFunction): any {
@@ -55,7 +55,7 @@ export class PetController{
       
     foundTutor.pets[petIndex] = updatedPet;
 
-    return res.status(200).json({message: 'Pet atualizado com sucesso!', updatePet: updatedPet});
+    return res.status(200).json({message: 'Pet updated successfully!', updatePet: updatedPet});
   }
 
   deletePet (req: Request, res: Response, next: NextFunction): any {
@@ -72,6 +72,6 @@ export class PetController{
   
     foundTutor.pets.splice(petIndex, 1)
     
-    return res.status(200).json({message: 'Pet deletado com sucesso!'})
+    return res.status(200).json({message: 'Pet deleted successfully!'})
   }
 }

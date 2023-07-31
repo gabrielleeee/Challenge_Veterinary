@@ -21,12 +21,12 @@ export class TutorController {
     };
     
     if (isTutorIdExists(+tutor.id)) {
-      return res.status(400).json({ message: 'ID do tutor já está em uso!' });
+      return res.status(400).json({ message: 'Tutor ID is already in use!' });
     }
 
     Tutors.push(newTutor);
     
-    return res.status(200).json({message: 'Tutor criado com sucesso!', createTutor: newTutor});
+    return res.status(200).json({message: 'Tutor created successfully!', createTutor: newTutor});
   }
 
 
@@ -60,7 +60,7 @@ export class TutorController {
       updateTutor.zip_code, 
       foundTutor.pets);
 
-    return res.status(200).json({message: 'Tutor atualizado com sucesso!', updateTutors: Tutors[tutorIndex]});
+    return res.status(200).json({message: 'Tutor updated successfully!', updateTutors: Tutors[tutorIndex]});
     }
 
   deleteTutor (req: Request, res: Response, next: NextFunction): any {
@@ -73,6 +73,6 @@ export class TutorController {
   
     Tutors.splice(tutorIndex, 1);
   
-    return res.status(200).json({message: 'Tutor deletado com sucesso!'})
+    return res.status(200).json({message: 'Tutor deleted successfully!'})
   }
 }
