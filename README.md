@@ -1,4 +1,8 @@
 
+## Authors
+
+- Developed by [Gabrielle Poletti Ferreira](https://github.com/gabrielleeee)
+- E-mail: gabrielle.poletti.pb@compasso.com.br
 
 # Veterinary Franchise
 
@@ -63,5 +67,4 @@ The collection will be imported with the routes and the body filled with data fo
 - [x] Upgrade a pet
 - [x] Delete a pet from a customer
 
-## Authors
-- Developed by [Gabrielle Poletti Ferreira](https://github.com/gabrielleeee)
+
