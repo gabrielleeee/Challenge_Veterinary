@@ -2,7 +2,6 @@
 ## Authors
 
 - Developed by [Gabrielle Poletti Ferreira](https://github.com/gabrielleeee)
-- E-mail: gabrielle.poletti.pb@compasso.com.br
 
 # Veterinary Franchise
 
@@ -27,7 +26,6 @@ First, copy the repository link and run the command in Command Prompt in a folde
 
 ```
 git clone {link}
-
 ```
 Open the folder in an editor and run the command below to install the project's dependencies.
 
